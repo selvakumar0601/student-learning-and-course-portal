@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnHub - Student Course Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">📚 LearnHub</div>
+    <nav>
+        <a href="#courses">Courses</a>
+        <a href="#dashboard">My Learning</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Learn New Skills.<br><span>Build Your Future.</span></h1>
+    <p>Discover courses and improve your skills every day.</p>
+    <a href="#courses" class="btn">Explore Courses</a>
+</section>
+
+<section class="stats">
+    <div class="stat-card">
+        <h2 id="totalCourses">0</h2>
+        <p>Available Courses</p>
+    </div>
+    <div class="stat-card">
+        <h2 id="enrolledCourses">0</h2>
+        <p>Enrolled Courses</p>
+    </div>
+    <div class="stat-card">
+        <h2 id="completedCourses">0</h2>
+        <p>Completed Courses</p>
+    </div>
+</section>
+
+<section class="container" id="courses">
+    <h2>Explore Courses</h2>
+
+    <div class="filters">
+        <input type="text" id="searchInput" placeholder="Search courses...">
+
+        <select id="categoryFilter">
+            <option value="All">All Categories</option>
+            <option value="Web Development">Web Development</option>
+            <option value="Programming">Programming</option>
+            <option value="Database">Database</option>
+            <option value="Design">Design</option>
+        </select>
+    </div>
+
+    <div id="courseGrid" class="course-grid"></div>
+</section>
+
+<section class="container" id="dashboard">
+    <h2>My Learning Dashboard</h2>
+    <div id="dashboardGrid" class="course-grid"></div>
+</section>
+
+<div id="courseModal" class="modal">
+    <div class="modal-content">
+        <button class="close-btn" onclick="closeModal()">×</button>
+        <div id="modalContent"></div>
+    </div>
+</div>
+
+<footer>
+    <p>© 2026 LearnHub | Student Learning Portal</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
